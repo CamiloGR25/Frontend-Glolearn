@@ -6,13 +6,15 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CursosService {
-  apiUri="glolearn/cursos";//indica la ruta a la que se accedera de la API
-  constructor(private http:HttpClient) { }
+  apiUri='/glolearn/cursos';//indica la ruta a la que se accedera de la API
   httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
-}
+  
+  constructor(private http:HttpClient) { }
 
-getAllCursosData(): Observable<any>{
-  return this.http.get<any>(this.apiUri);
+  getTodosCursosData(): Observable<any>{
+    return this.http.get<any>(this.apiUri);
+  }
+
 }
 
 
