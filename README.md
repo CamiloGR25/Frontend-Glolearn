@@ -16,8 +16,11 @@ CREAR EL PROYECTO:
    m: abreviación de “module”, se puede bien escribir la palabra “module” o solo la “m”.
    --flat: indica que se crea un archivo para el módulo si colocarlo dentro de una carpeta específica. Si se quita este indicador, se creará una carpeta para el módulo.
 
-6.
+6. ng g s services/nombre_servicio ----> Crear un servicio
+
+7. ng g c components/nombre_componente --skip-import ---->Crear un componente
 
 EJECUTAR EL PROYECTO:
 
-- ng serve ----> Iniciar el servidor
+- ng serve ----> Iniciar el servidor (antes de configurar el start con el proxy)
+  -npm start ----> Iniciar el servidor con el componente proxy
