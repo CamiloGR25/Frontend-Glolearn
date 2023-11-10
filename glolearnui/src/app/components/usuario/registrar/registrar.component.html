@@ -1,4 +1,4 @@
-<form [FormGroup]="formulario" (ngSubmit)="onSubmit()">
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
     <div class="mb-3">
         <label>Nombre:</label>
         <input type="text" class="form-control" formControlName="nombre">
@@ -35,5 +35,6 @@
         <label>Contraseña:</label>
         <input type="password" class="form-control" formControlName="contraseña">
     </div>
-    <input type="submit" value="Enviar" class="btn btn-info">
+    <input type="submit" value="Crear Usuario" class="btn btn-info">
+    <input type="" value="cancelar" class="btn btn-danger">>
 </form>

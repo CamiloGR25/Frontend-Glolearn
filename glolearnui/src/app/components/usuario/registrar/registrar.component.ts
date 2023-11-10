@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder} from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -8,20 +8,20 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./registrar.component.css']
 })
 export class RegistrarComponent {
-  formulario:FormGroup;
+  formulario:any=this.formbuilder.group({
+    nombre:"",
+    apellido:"",
+    correo:"",
+    cargo:"",
+    identificacion:"",
+    numIdentificacion:0,
+    fechaNacimiento: Date,
+    nombreUsuario:"",
+    contraseña:""
+  });
   usuarioService=inject(UsuarioService)
-  constructor(){
-    this.formulario=new FormGroup({ //Creamos un objeto de tipo formulario con sus atributos que recibiremos
-      nombre:new FormControl(),
-      apellido: new FormControl(),
-      correo: new FormControl(),
-      cargo: new FormControl(),
-      identificacion: new FormControl(),
-      numIdentificacion: new FormControl(),
-      fechaNacimiento: new FormControl(),
-      nombreUsuario: new FormControl(),
-      contraseña: new FormControl()
-    })
+  constructor(private formbuilder:FormBuilder){
+    
   }
   onSubmit(){
     this.usuarioService.registrar(this.formulario.value);
