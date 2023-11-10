@@ -8,13 +8,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RegistrarComponent } from './components/usuario/registrar/registrar.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CursosComponent,//declarar el nuevo componente cursos
-    RegistrarComponent
+    RegistrarComponent,
+    InicioComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

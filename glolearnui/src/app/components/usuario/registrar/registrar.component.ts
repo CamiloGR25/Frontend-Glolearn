@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -20,10 +21,11 @@ export class RegistrarComponent {
     contraseña:""
   });
   usuarioService=inject(UsuarioService)
-  constructor(private formbuilder:FormBuilder){
+  constructor(private formbuilder:FormBuilder, private router: Router){
     
   }
   onSubmit(){
     this.usuarioService.registrar(this.formulario.value);
+    this.router.navigateByUrl('/ingresar');
   }
 }
