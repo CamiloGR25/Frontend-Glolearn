@@ -1,1 +1,50 @@
-<p>ingresar works!</p>
+<main class="flex-shrink-0">
+    <section class="py-5">
+        <div class="container px-5">
+            <!-- Contact form-->
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3" style="width: 150px;
+                    height: 100px;">
+                        <i class="bi bi-person-workspace" style="font-size: 100px;"></i>
+                    </div>
+                    <br><br>
+                    <h1 class="fw-bolder">INICIAR SESIÓN</h1>
+                    <p class="lead fw-normal text-muted mb-0">Diligencia los datos para iniciar sesión</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="email" formControlName="correo"
+                                    placeholder="Ingresa el correo" data-sb-validations="required" />
+                                <label>Correo:</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select id="disabledSelect" class="form-select form-control" formControlName="cargo"
+                                    placeholder="Ingresa el cargo" data-sb-validations="required">
+                                    <option></option>
+                                    <option>Aprendiz</option>
+                                    <option>Instructor</option>
+                                    <option>Administrador</option>
+                                </select>
+                                <label>Cargo:</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="password" formControlName="contraseña"
+                                    placeholder="Ingresa la contraseña" data-sb-validations="required" />
+                                <label>Contraseña:</label>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg">Iniciar Sesión</button><br>
+                                <p class="text-center">Si no tiene una cuenta debe <a href="/registrar">registrarse</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
