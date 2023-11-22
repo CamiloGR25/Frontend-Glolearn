@@ -14,6 +14,8 @@ import { IngresarComponent } from './components/usuario/ingresar/ingresar.compon
 import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
 import { EliminarCursoComponent } from './components/cursos/eliminar-curso/eliminar-curso.component';
 import { ToastrModule } from 'ngx-toastr';
+import { InscribirCursoComponent } from './components/usuario/inscribir-curso/inscribir-curso.component';
+import { MisCursosComponent } from './components/usuario/mis-cursos/mis-cursos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ToastrModule } from 'ngx-toastr';
     InicioComponent,
     MenuComponent,
     CrearCursoComponent,
-    EliminarCursoComponent
+    EliminarCursoComponent,
+    InscribirCursoComponent,
+    MisCursosComponent
   ],
   imports: [
     BrowserModule,

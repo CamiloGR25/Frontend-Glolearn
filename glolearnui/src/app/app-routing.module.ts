@@ -6,6 +6,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { IngresarComponent } from './components/usuario/ingresar/ingresar.component';
 import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
 import { EliminarCursoComponent } from './components/cursos/eliminar-curso/eliminar-curso.component';
+import { InscribirCursoComponent } from './components/usuario/inscribir-curso/inscribir-curso.component';
+import { MisCursosComponent } from './components/usuario/mis-cursos/mis-cursos.component';
 
 const routes: Routes = [
   {path : 'cursos', component: CursosComponent },
@@ -15,6 +17,9 @@ const routes: Routes = [
   {path: '', component:InicioComponent},
   {path: 'crear/curso', component:CrearCursoComponent},
   {path: 'eliminar/curso', component:EliminarCursoComponent},
+  {path: 'inscribir_curso', component:InscribirCursoComponent},
+  {path: 'mis_curso', component:MisCursosComponent}
+
 ];
 
 @NgModule({

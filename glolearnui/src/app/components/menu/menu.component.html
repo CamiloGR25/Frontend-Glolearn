@@ -1,11 +1,13 @@
 <main class="site-wrapper" id="div-superpuesto" style="display: none;">
     <div class="pt-table desktop-768">
         <div class="pt-tablecell page-home relative">
-            <div class="overlay"></div>
+
+
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-                        <div class="hexagon-menu clear" *ngIf="rol==='Administrador'">
+
+                        <div class="hexagon-menu clear">
                             <div class="hexagon-item">
                                 <div class="hex-item">
                                     <div></div>
@@ -13,19 +15,16 @@
                                     <div></div>
                                 </div>
                                 <div class="hex-item">
-                                    <div>
-
-                                    </div>
+                                    <div></div>
                                     <div></div>
                                     <div></div>
                                 </div>
-
                                 <a class="hex-content" href="inicio">
                                     <span class="hex-content-inner">
                                         <span class="icon">
-                                            <i class="fa fa-universal-access"></i>
+                                            <i class="fa fa-map-signs"></i>
                                         </span>
-                                        <span class="title">Cerrar sesión</span>
+                                        <span class="title">Cerrar Sesión</span>
                                     </span>
                                     <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -35,19 +34,149 @@
                                     </svg>
                                 </a>
                             </div>
-
+                            <div class="hexagon-item" *ngIf="rol==='Aprendiz'">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" href="inscribir_curso">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-bullseye"></i>
+                                        </span>
+                                        <span class="title">Inscribir Curso</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#1e2530"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item" *ngIf="rol==='Aprendiz'">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" href="mis_curso">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-braille"></i>
+                                        </span>
+                                        <span class="title">Mis Cursos</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#1e2530"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item" *ngIf="rol==='Administrador'">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" href="crear/curso">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-id-badge"></i>
+                                        </span>
+                                        <span class="title">Crear Curso</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#1e2530"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item" *ngIf="rol==='Administrador'">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" href="eliminar/curso">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-life-ring"></i>
+                                        </span>
+                                        <span class="title">Eliminar Curso</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#1e2530"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <a class="hex-content" href="cursos">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-universal-access"></i>
+                                        </span>
+                                        <span class="title">Ver Cursos</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#1e2530"></path>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <button class="btn btn-light btn-lg" onclick="menu()">Atrás</button>
             </div>
         </div>
     </div>
 </main>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
     <div class="container px-5 feature  bg-gradient-primary-to-secondary rounded-3" style="width:100%; height: 100%;">
         <img src="../../../assets/img/GlolearnLogo2.png" width="110" height="100" style="filter: brightness(200%);"
-            alt="">
+            alt="" onclick="menu()">
         <h1 class="fw-bolder text-light"><strong> GloLearn</strong> </h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -61,17 +190,17 @@
                 <li class="nav-item" *ngIf="rol==='Administrador'"><a class="nav-link fw-bolder text-light"
                         href="eliminar/curso">Eliminar Curso</a>
                 </li>
-                <li class="nav-item "><a class="nav-link fw-bolder text-light" href="inicio">Cerrar sesión</a></li>
+                <li class="nav-item" *ngIf="rol==='Aprendiz'"><a class="nav-link fw-bolder text-light"
+                        href="inscribir_curso">Inscribir
+                        Curso</a>
+                </li>
+                <li class="nav-item" *ngIf="rol==='Aprendiz'"><a class="nav-link fw-bolder text-light"
+                        href="mis_curso">Mis
+                        Cursos</a>
+                </li>
+                <li class="nav-item "><a class="nav-link fw-bolder text-light" href="inicio">Cerrar Sesión</a></li>
 
             </ul>
         </div>
     </div>
-
 </nav>
-<button id="menu-boton">Mostrar menú</button>
-
-<ul id="menu" style="display: none;">
-    <li><a href="#">Opción 1</a></li>
-    <li><a href="#">Opción 2</a></li>
-    <li><a href="#">Opción 3</a></li>
-</ul>
