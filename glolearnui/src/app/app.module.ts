@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { RegistrarComponent } from './components/usuario/registrar/registrar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { IngresarComponent } from './components/usuario/ingresar/ingresar.component';
+import { CrearCursoComponent } from './components/crear-curso/crear-curso.component';
 
 
 @NgModule({
@@ -17,8 +19,10 @@ import { MenuComponent } from './components/menu/menu.component';
     AppComponent,
     CursosComponent,//declarar el nuevo componente cursos
     RegistrarComponent,
+    IngresarComponent,
     InicioComponent,
-    MenuComponent
+    MenuComponent,
+    CrearCursoComponent
   ],
   imports: [
     BrowserModule,

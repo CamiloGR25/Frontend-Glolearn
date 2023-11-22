@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, inject } from '@angular/core';
 import { FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
@@ -21,8 +22,10 @@ export class RegistrarComponent {
     contraseña:""
   });
   usuarioService=inject(UsuarioService)
-  constructor(private formbuilder:FormBuilder, private router: Router){
-    
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private formbuilder:FormBuilder, 
+    private router: Router){
   }
   onSubmit(){
     this.usuarioService.registrar(this.formulario.value);

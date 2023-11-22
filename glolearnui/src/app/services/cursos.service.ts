@@ -15,6 +15,18 @@ export class CursosService {
     return this.http.get<any>(this.apiUri);
   }
 
+  nuevoCurso(token:any, data:any):Observable<any>{
+    return this.http.post<any>(
+      this.apiUri,
+      data,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          accessToken: `${token}`
+        }
+      });
+  }
+
 }
 
 

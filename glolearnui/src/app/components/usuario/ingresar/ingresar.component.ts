@@ -8,7 +8,7 @@ import {UsuarioService} from 'src/app/services/usuario.service'
   templateUrl: './ingresar.component.html',
   styleUrls: ['./ingresar.component.css']
 })
-export class IngresarComponent {
+export class IngresarComponent implements OnDestroy{
   constructor(@Inject(DOCUMENT) private document: Document,
     private authenticationService: UsuarioService,
     private router: Router) { }
@@ -22,12 +22,13 @@ export class IngresarComponent {
   }
 
   onLogin(form: any): void {
-    alert("aaaaaaaaaaa")
     console.log(form.value);
     this.authenticationService.login(form.value).subscribe(
-      (res:any) => {
+      (res) => {
+        alert("aa")
         localStorage.setItem('accessToken',JSON.parse(JSON.stringify(res)).accessToken);
         this.router.navigateByUrl('/cursos');
+        
       }
     );
   }
