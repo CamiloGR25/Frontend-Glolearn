@@ -27,6 +27,15 @@ export class CursosService {
       });
   }
 
+  eliminarCurso(id:any):Observable<any>{
+    return this.http.delete<any>(this.apiUri+"/"+id, {
+      headers: {
+        'Content-Type': 'application/json',
+        id: `${id}`
+      }
+    });             
+  }
+
 }
 
 

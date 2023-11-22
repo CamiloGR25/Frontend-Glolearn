@@ -32,6 +32,8 @@ export class UsuarioService {
           {
             console.log(JSON.parse(JSON.stringify(res)).accessToken)
             ACCESS_TOKEN: JSON.parse(JSON.stringify(res)).accessToken
+            cargo: JSON.parse(JSON.stringify(res)).cargo
+            
           }
         }else{
           console.log('hubo un error')

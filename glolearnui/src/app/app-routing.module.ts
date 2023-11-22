@@ -4,7 +4,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
 import { RegistrarComponent } from './components/usuario/registrar/registrar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { IngresarComponent } from './components/usuario/ingresar/ingresar.component';
-import { CrearCursoComponent } from './components/crear-curso/crear-curso.component';
+import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
+import { EliminarCursoComponent } from './components/cursos/eliminar-curso/eliminar-curso.component';
 
 const routes: Routes = [
   {path : 'cursos', component: CursosComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'ingresar', component: IngresarComponent},
   {path: 'inicio', component:InicioComponent},
   {path: '', component:InicioComponent},
-  {path: 'crear/curso', component:CrearCursoComponent}
+  {path: 'crear/curso', component:CrearCursoComponent},
+  {path: 'eliminar/curso', component:EliminarCursoComponent},
 ];
 
 @NgModule({

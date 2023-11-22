@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+  rol:any="";
+
+  ngOnInit(){
+    this.rol=localStorage.getItem("cargo");
+  }
 }

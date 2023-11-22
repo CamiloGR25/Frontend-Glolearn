@@ -25,10 +25,9 @@ export class IngresarComponent implements OnDestroy{
     console.log(form.value);
     this.authenticationService.login(form.value).subscribe(
       (res) => {
-        alert("aa")
         localStorage.setItem('accessToken',JSON.parse(JSON.stringify(res)).accessToken);
-        this.router.navigateByUrl('/cursos');
-        
+        localStorage.setItem('cargo',JSON.parse(JSON.stringify(res)).cargo);
+        this.router.navigateByUrl('/cursos'); 
       }
     );
   }

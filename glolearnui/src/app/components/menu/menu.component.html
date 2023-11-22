@@ -1,21 +1,77 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-3" style="width: 100%;">
-    <div class="container px-5">
-        <div class="feature  bg-gradient-primary-to-secondary rounded-3" style="width:100%; height: 100%;">
-            <img src="../../../assets/img/GlolearnLogo2.png" width="110" height="100" style="filter: brightness(200%);"
-                alt="">
-            <h1 class="fw-bolder text-light"><strong> GloLearn</strong> </h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small">
-                    <li class="nav-item "><a class="nav-link fw-bolder text-light" href="inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bolder text-light" href="cursos">Ver Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bolder text-light" href="crear/curso">Crear Curso</a>
-                    </li>
-                </ul>
+<main class="site-wrapper" id="div-superpuesto" style="display: none;">
+    <div class="pt-table desktop-768">
+        <div class="pt-tablecell page-home relative">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                        <div class="hexagon-menu clear" *ngIf="rol==='Administrador'">
+                            <div class="hexagon-item">
+                                <div class="hex-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="hex-item">
+                                    <div>
+
+                                    </div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <a class="hex-content" href="inicio">
+                                    <span class="hex-content-inner">
+                                        <span class="icon">
+                                            <i class="fa fa-universal-access"></i>
+                                        </span>
+                                        <span class="title">Cerrar sesión</span>
+                                    </span>
+                                    <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z"
+                                            fill="#1e2530"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</main>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+    <div class="container px-5 feature  bg-gradient-primary-to-secondary rounded-3" style="width:100%; height: 100%;">
+        <img src="../../../assets/img/GlolearnLogo2.png" width="110" height="100" style="filter: brightness(200%);"
+            alt="">
+        <h1 class="fw-bolder text-light"><strong> GloLearn</strong> </h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small">
+                <li class="nav-item"><a class="nav-link fw-bolder text-light" href="cursos">Ver Cursos</a></li>
+                <li class="nav-item" *ngIf="rol==='Administrador'"><a class="nav-link fw-bolder text-light"
+                        href="crear/curso">Crear Curso</a>
+                </li>
+                <li class="nav-item" *ngIf="rol==='Administrador'"><a class="nav-link fw-bolder text-light"
+                        href="eliminar/curso">Eliminar Curso</a>
+                </li>
+                <li class="nav-item "><a class="nav-link fw-bolder text-light" href="inicio">Cerrar sesión</a></li>
+
+            </ul>
+        </div>
+    </div>
+
 </nav>
-<script src="../../../assets/js/scripts.js"></script>
+<button id="menu-boton">Mostrar menú</button>
+
+<ul id="menu" style="display: none;">
+    <li><a href="#">Opción 1</a></li>
+    <li><a href="#">Opción 2</a></li>
+    <li><a href="#">Opción 3</a></li>
+</ul>

@@ -16,12 +16,12 @@
                     <div class="col-lg-8 col-xl-6">
                         <form (ngSubmit)="onLogin(formLogin)" #formLogin="ngForm">
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="email" formControlName="correo"
+                                <input class="form-control" type="email" name="correo" ngModel
                                     placeholder="Ingresa el correo" data-sb-validations="required" />
                                 <label>Correo:</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <select id="disabledSelect" class="form-select form-control" formControlName="cargo"
+                                <select id="disabledSelect" class="form-select form-control" name="cargo" ngModel
                                     placeholder="Ingresa el cargo" data-sb-validations="required">
                                     <option></option>
                                     <option>Aprendiz</option>
@@ -31,7 +31,7 @@
                                 <label>Cargo:</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input class="form-control" type="password" formControlName="contraseña"
+                                <input class="form-control" type="password" name="contraseña" ngModel
                                     placeholder="Ingresa la contraseña" data-sb-validations="required" />
                                 <label>Contraseña:</label>
                             </div>

@@ -20,6 +20,8 @@ CREAR EL PROYECTO:
 
 7. ng g c components/nombre_componente --skip-import ---->Crear un componente
 
+8. npm install ngx-toastr --save ----> Mensajes de notificación
+
 EJECUTAR EL PROYECTO:
 
 - ng serve ----> Iniciar el servidor (antes de configurar el start con el proxy)

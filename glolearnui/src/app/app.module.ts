@@ -11,8 +11,9 @@ import { RegistrarComponent } from './components/usuario/registrar/registrar.com
 import { InicioComponent } from './components/inicio/inicio.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { IngresarComponent } from './components/usuario/ingresar/ingresar.component';
-import { CrearCursoComponent } from './components/crear-curso/crear-curso.component';
-
+import { CrearCursoComponent } from './components/cursos/crear-curso/crear-curso.component';
+import { EliminarCursoComponent } from './components/cursos/eliminar-curso/eliminar-curso.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CrearCursoComponent } from './components/crear-curso/crear-curso.compon
     IngresarComponent,
     InicioComponent,
     MenuComponent,
-    CrearCursoComponent
+    CrearCursoComponent,
+    EliminarCursoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,10 @@ import { CrearCursoComponent } from './components/crear-curso/crear-curso.compon
     FormsModule,
     HttpClientModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-center',
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
