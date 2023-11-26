@@ -1,1 +1,35 @@
 <app-menu></app-menu>
+
+<section class="py-5">
+    <div class="container px-5 mb-5">
+        <div class="text-center mb-5">
+            <h1 class="fs-1 display-5 fw-bolder mb-0"><span class="text-gradient d-inline"><b>Cursos
+                        disponibles:</b></span>
+            </h1>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
+                <!-- Tarjeta Curso -->
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-5" *ngFor="let item of cursosList">
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5">
+                                <h1 class="fw-bolder"><b>{{item.nombre}}</b></h1>
+                                <p>{{item.descripcion}}</p>
+                                <p><b>Instructor: </b>{{item.instructor}}</p>
+                                <p><b>Prerrequisitos: </b>{{item.prerrequisitos}}</p>
+                                <p><b>Duración: </b>{{item.duracion}} Horas</p>
+                                <br><br>
+                                <button type="button" class="btn btn-dark btn-lg bg-gradient-primary-to-secondary"
+                                    (click)="recibirIdCurso(cursos.value)" #cursos value="{{item._id}}">
+                                    Inscribirse</button>
+                            </div>
+                            <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

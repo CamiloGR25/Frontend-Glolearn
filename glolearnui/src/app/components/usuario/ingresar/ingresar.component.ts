@@ -27,6 +27,7 @@ export class IngresarComponent implements OnDestroy{
       (res) => {
         localStorage.setItem('accessToken',JSON.parse(JSON.stringify(res)).accessToken);
         localStorage.setItem('cargo',JSON.parse(JSON.stringify(res)).cargo);
+        localStorage.setItem('_id',JSON.parse(JSON.stringify(res))._id);
         this.router.navigateByUrl('/cursos'); 
       }
     );

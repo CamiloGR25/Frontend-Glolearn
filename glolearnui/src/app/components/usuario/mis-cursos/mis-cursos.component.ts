@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./mis-cursos.component.css']
 })
 export class MisCursosComponent {
-
+  cursosList:any=[];
+  
 }

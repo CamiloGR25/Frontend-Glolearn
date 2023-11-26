@@ -11,7 +11,6 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class UsuarioService {
   private httpClient=inject(HttpClient);
-  private apiUrl='/glolearn/usuarios/registrar'
   private apiUri='/glolearn/usuarios'
 
   private token: string | null = '';
@@ -20,7 +19,7 @@ export class UsuarioService {
 
   async registrar(formValor:any){
     return firstValueFrom(
-      await this.httpClient.post<any>(`${this.apiUrl}`,formValor)
+      await this.httpClient.post<any>(this.apiUri+'/registrar',formValor)
     )
   }
 
@@ -32,8 +31,8 @@ export class UsuarioService {
           {
             console.log(JSON.parse(JSON.stringify(res)).accessToken)
             ACCESS_TOKEN: JSON.parse(JSON.stringify(res)).accessToken
-            cargo: JSON.parse(JSON.stringify(res)).cargo
-            
+            cargo: JSON.parse(JSON.stringify(res)).cargo       
+            _id: JSON.parse(JSON.stringify(res))._id          
           }
         }else{
           console.log('hubo un error')
@@ -47,6 +46,12 @@ export class UsuarioService {
     this.token = '';
     localStorage.removeItem("accessToken");
     //localStorage.removeItem("EXPIRES_IN");
+  }
+
+  inscribirCurso(id: any, data: any): Observable<any> {
+    return this.httpClient.put<any>(this.apiUri + '/inscribirCurso/' + id,
+      data
+      );
   }
 
   private saveToken(token: string, expiresIn: string) {

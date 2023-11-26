@@ -34,7 +34,7 @@ export class EliminarCursoComponent {
   }
 
   newMessage(messageText: string, id:any) {
-    this.toastr.error('Clic aquí para actualizar la lista', messageText)
+    this.toastr.error('Clic aquí para eliminar el curos', messageText)
       .onTap
       .pipe(take(1))
       .subscribe(() => this.eliminarCurso(id));
