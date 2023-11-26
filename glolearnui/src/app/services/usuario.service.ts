@@ -54,6 +54,10 @@ export class UsuarioService {
       );
   }
 
+  getCursosUsuarioData(id:any): Observable<any>{
+    return this.httpClient.get<any>(this.apiUri+'/consultarCursos/'+id)
+  }
+
   private saveToken(token: string, expiresIn: string) {
     localStorage.setItem("ACCESS_TOKEN", token);
     localStorage.setItem("EXPIRES_IN", token);
@@ -66,4 +70,6 @@ export class UsuarioService {
     }
     return this.token;
   }
+
+
 }

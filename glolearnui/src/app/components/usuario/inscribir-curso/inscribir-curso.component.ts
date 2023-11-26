@@ -14,6 +14,7 @@ export class InscribirCursoComponent {
   cursosList:any=[];
   idUsuario:any="";
   idCurso:any;
+  cursoInscrito:boolean=false;
 
   constructor(
     private cursosService: CursosService,
@@ -29,7 +30,7 @@ export class InscribirCursoComponent {
   }
 
   getTodoscursos(){
-    this.cursosService.getTodosCursosData().subscribe((data:{})=>{this.cursosList=data})//trae los datos de todos loc sursos
+    this.cursosService.getTodosCursosData().subscribe((data:{})=>{this.cursosList=data})//trae los datos de todos los sursos
   }
   ngOnInit(){
     this.getTodoscursos();
@@ -45,8 +46,12 @@ export class InscribirCursoComponent {
     this.usuarioService.inscribirCurso(this.idUsuario, {codigoCurso: this.idCurso}).subscribe(
       () => {
         //Enviando mensaje de confirmación
+        this.cursoInscrito=true
         alert("Inscripción del curso exitosa")
       }
     );
+    setTimeout(()=>{
+      this.cursoInscrito=false
+    },3500);
   }
 }

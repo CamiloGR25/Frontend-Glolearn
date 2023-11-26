@@ -34,7 +34,7 @@ export class EliminarCursoComponent {
   }
 
   newMessage(messageText: string, id:any) {
-    this.toastr.error('Clic aquí para eliminar el curos', messageText)
+    this.toastr.error('Clic aquí para eliminar el curso', messageText)
       .onTap
       .pipe(take(1))
       .subscribe(() => this.eliminarCurso(id));
@@ -45,6 +45,9 @@ export class EliminarCursoComponent {
       //window.location.reload();
       this.cursoEliminado=true;
     })
+    setTimeout(()=>{
+      this.cursoEliminado=false
+    },3500);
   }
 }
 
