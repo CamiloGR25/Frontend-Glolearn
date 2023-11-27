@@ -16,12 +16,17 @@ export class MisCursosComponent {
     private cursosService: CursosService){}
 
   ngOnInit(){
-    this.usuarioService.getCursosUsuarioData(localStorage.getItem("_id")).subscribe((data:{})=>{this.cursosID=data})
-    this.cursosService.getTodosCursosData().subscribe((data:{})=>{this.cursosLista=data})//trae los datos de todos los sursos 
+    this.usuarioService.getCursosUsuarioData(localStorage.getItem("_id")).subscribe((data:{})=>{this.cursosID=JSON.parse(JSON.stringify(data)).cursos
+      console.log(this.cursosID)
+    })
+    
+    this.cursosService.getTodosCursosData().subscribe((data:{})=>{this.cursosLista=data
+    console.log(this.cursosLista)
+    })
     
   }
   
-  identificarCursos(){
-   
+  entrarCurso(){
+    alert("Entrando al curos...")
   }
 }

@@ -11,14 +11,16 @@
             <div class="col-lg-11 col-xl-9 col-xxl-8">
                 <!-- Tarjeta Curso -->
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-5" *ngFor="let item of cursosID">
-                    <div class="card-body p-0">
-                        <div class="d-flex align-items-center">
+                    <div class="card-body p-0" *ngFor="let item2 of cursosLista">
+                        <div class="d-flex align-items-center" *ngIf="item===item2._id">
                             <div class="p-5">
-                                <h1 class="fw-bolder"><b>{{item.cursos}}</b></h1>
-
-
+                                <h1 class="fw-bolder"><b>{{item2.nombre}}</b></h1><br>
+                                <p>{{item2.descripcion}}</p>
+                                <br>
+                                <p><b>Instructor: </b>{{item2.instructor}}</p>
                                 <br><br>
-                                <button type="button" class="btn btn-dark btn-lg bg-gradient-primary-to-secondary">
+                                <button type="button" class="btn btn-dark btn-lg bg-gradient-primary-to-secondary"
+                                    (click)="entrarCurso()">
                                     Entrar al curso</button>
                             </div>
                             <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
